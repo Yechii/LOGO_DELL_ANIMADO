@@ -1,0 +1,91 @@
+<html>
+<head>
+    <style>
+        #Circulo{
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            border: #000 solid 14px;
+            animation-name:giroCirculo;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            transform-style: preserve-3d;
+            
+            position: absolute;
+        }
+        .LisDELL li{
+        display: inline-block;
+        }
+        ul{
+            animation-name:tamano;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        #E{
+            transform: rotate(-50deg); 
+            animation-delay: 5s;
+           animation-name:letraE;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            
+        }
+        #Contenedor{
+            
+           width:260px;
+           height:260px;
+           padding-top: 20px;
+            
+        }
+        h1{
+            font-size: 85px;
+            font-family: Arial, Helvetica;
+            font-weight: 900;
+        }
+        li{
+            margin: -5px;
+        }
+        
+        @keyframes tamano{
+            from{
+                transform: scale(0.1);
+           } to{
+               transform: scale(1.1); 
+           }
+        }
+        @keyframes letraE{
+            from{
+                transform: rotate(0deg);
+           } to{
+               transform: rotate(-50deg); 
+           }
+            
+        }
+        @keyframes giroCirculo{
+            from{
+                transform: rotateX(0deg) ;
+           } to{
+              transform: rotateX(360deg) ; 
+           }
+        }
+        div{
+            perspective: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Circulo">
+        
+    </div>
+    <div id="Contenedor">
+            <ul class="LisDELL">
+                <li><h1 id="D">D</h1></li>
+                <li><h1 id="E">E</h1></li>
+                <li><h1 id="L1">L</h1></li>
+                <li><h1 id="L2">L</h1></li>
+            </ul>
+        </div>
+</body>
+</html>
